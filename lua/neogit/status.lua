@@ -206,6 +206,7 @@ local function display_status()
               status_buffer:place_sign(line_idx, 'NeogitDiffAdd', 'hl')
             elseif diff_delete_matcher:match_str(diff_line) then
               status_buffer:place_sign(line_idx, 'NeogitDiffDelete', 'hl')
+            else status_buffer:place_sign(line_idx, 'NeogitDiffContext', 'hl')
             end
           end
           item.diff_open = true
